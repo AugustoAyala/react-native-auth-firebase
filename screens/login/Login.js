@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Text, View, TouchableHighlight } from "react-native";
-import styles from "./styles";
+import styles from "../../styles";
 import { TextInput } from "react-native-gesture-handler";
 import firebaseService from "../../services/firebase";
 
@@ -35,17 +35,14 @@ const Login = ({ navigation }) => {
           onChange={(e) => setPassword(e.nativeEvent.text)}
         />
       </View>
-      <TouchableHighlight
-        style={[styles.button, styles.loginButton]}
-        onPress={onLogin}
-      >
-        <Text style={styles.textButtonLogin}>Login</Text>
+      <TouchableHighlight style={styles.button} onPress={onLogin}>
+        <Text style={styles.textButton}>Login</Text>
       </TouchableHighlight>
       <TouchableHighlight
-        style={styles.signUpButton}
+        style={styles.buttonNav}
         onPress={() => navigation.navigate("SingUp")}
       >
-        <Text style={styles.textButtonSingUp}>Create account</Text>
+        <Text style={styles.textButtonNav}>Create account</Text>
       </TouchableHighlight>
     </View>
   );

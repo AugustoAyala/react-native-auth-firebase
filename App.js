@@ -4,7 +4,6 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Login from "./screens/login/Login";
 import Main from "./screens/main/Main";
 import SingUp from "./screens/singUp/SingUp";
-
 const Stack = createStackNavigator();
 
 export default function App() {
